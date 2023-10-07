@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+/* Estilos generales */
+:root {
+  /* Alturas */
+  --rtc-min-height: 100vh;
+  /* Anchura */
+  --rtc-width: 100%;
+  /* Colores */
+  --rtc-bg-color: #000000;
+  --rtc-color: #33c51f;
+  /* Borde */
+  --rtc-border: 1px dashed var(--rtc-color);
+  /* Fuente tipográfica */
+  --rtc-font-family: 'Pixelify Sans', cursive;
+  /* Márgenes */
+  --rtc-margin: 1rem;
+  --rtc-margin-footer: 10rem;
+  /* Padding */
+  --rtc-padding-header: 0.5rem;
+  --rtc-padding: 1rem;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--rtc-font-family);
+  min-height: var(--rtc-min-height);
+  background-color: var(--rtc-bg-color);
+  color: var(--rtc-color);
+}
+
+header,
+section,
+aside,
+footer {
+  border: var(--rtc-border);
+  margin-bottom: var(--rtc-margin);
+  padding: var(--rtc-padding);
+}
+
+header {
+  padding: var(--rtc-padding-header) 0 var(--rtc-padding-header)
+    var(--rtc-padding-header);
+}
+
+footer {
+  margin-top: var(--rtc-margin-footer);
+}
