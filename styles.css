@@ -5,6 +5,9 @@
   /* Alturas */
   --rtc-min-height: 100vh;
   /* Anchura */
+  --rtc-min-width-sidebar: 165px;
+  --rtc-min-width: 280px;
+  --rtc-width-sidebar: 175px;
   --rtc-width: 100%;
   /* Colores */
   --rtc-bg-color: #000000;
@@ -15,7 +18,8 @@
   --rtc-font-family: 'Pixelify Sans', cursive;
   /* Márgenes */
   --rtc-margin: 1rem;
-  --rtc-margin-footer: 10rem;
+  --rtc-margin-main: 4.5rem;
+  --rtc-margin-footer: 24rem;
   /* Padding */
   --rtc-padding-header: 0.5rem;
   --rtc-padding: 1rem;
@@ -27,26 +31,64 @@
 }
 
 body {
-  font-family: var(--rtc-font-family);
-  min-height: var(--rtc-min-height);
   background-color: var(--rtc-bg-color);
   color: var(--rtc-color);
+  font-family: var(--rtc-font-family);
+  min-height: var(--rtc-min-height);
+  min-width: var(--rtc-min-width);
 }
 
 header,
 section,
 aside,
 footer {
+  background-color: var(--rtc-bg-color);
   border: var(--rtc-border);
-  margin-bottom: var(--rtc-margin);
   padding: var(--rtc-padding);
+}
+
+header,
+aside,
+.content,
+.sidebar {
+  margin-bottom: var(--rtc-margin);
 }
 
 header {
   padding: var(--rtc-padding-header) 0 var(--rtc-padding-header)
     var(--rtc-padding-header);
+  position: fixed;
+  top: 0;
+  width: var(--rtc-width);
+  z-index: 1;
+}
+
+main {
+  margin-top: var(--rtc-margin-main);
+  position: relative;
 }
 
 footer {
   margin-top: var(--rtc-margin-footer);
+  padding: var(--rtc-padding);
+  position: sticky;
+  bottom: 0;
+}
+
+.sidebar {
+  min-width: var(--rtc-min-width-sidebar);
+  width: var(--rtc-width-sidebar);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.content {
+  position: relative;
+  top: 185px;
+}
+
+.features {
+  position: relative;
+  top: 185px;
 }
